@@ -14,7 +14,7 @@ On your `main.js` file
 ```js
 import { createApp } from "vue";
 import App from "./App.vue";
-import VueOrbisChatSupport from "./vue-orbis-chat-support";
+import VueOrbisChatSupport from "vue-orbis-chat-support";
 import "vue-orbis-chat-support/styles.css";
 
 const app = createApp(App);
