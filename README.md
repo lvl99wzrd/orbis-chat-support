@@ -30,7 +30,6 @@ On your component file
     <OrbisChatSupport
       context="kjzl6cwe1jw147b42j1yjoxyzrzeg3czq5mjm1lrmg5eeq43yutje3f2s0s2n5h"
       poweredByOrbis="black"
-      display="chat"
     />
   </div>
 </template>
@@ -49,7 +48,6 @@ import "vue-orbis-chat-support/styles.css";
     <OrbisChatSupport
       context="kjzl6cwe1jw147b42j1yjoxyzrzeg3czq5mjm1lrmg5eeq43yutje3f2s0s2n5h"
       poweredByOrbis="black"
-      display="chat"
     />
   </div>
 </template>
