@@ -10,6 +10,7 @@ npm install --save vue-orbis-chat-support
 
 ## Global Usage
 
+On your `main.js` file
 ```js
 import { createApp } from "vue";
 import App from "./App.vue";
@@ -21,6 +22,18 @@ const app = createApp(App);
 app.use(VueOrbisChatSupport);
 
 app.mount("#app");
+```
+On your component file
+```js
+<template>
+  <div>
+    <OrbisChatSupport
+      context="kjzl6cwe1jw147b42j1yjoxyzrzeg3czq5mjm1lrmg5eeq43yutje3f2s0s2n5h"
+      poweredByOrbis="black"
+      display="chat"
+    />
+  </div>
+</template>
 ```
 
 ## Local Usage
