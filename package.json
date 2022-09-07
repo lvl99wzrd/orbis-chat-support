@@ -1,0 +1,39 @@
+{
+  "name": "orbis-chat-support",
+  "version": "0.0.1",
+  "description": "Decentralized social modules created with the Orbis SDK",
+  "author": "lvl99wzrd",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js",
+    "./styles.css": "./dist/style.css"
+  },
+  "browser": {
+    "./styles.css": "./dist/style.css"
+  },
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "@orbisclub/orbis-sdk": "^0.3.30",
+    "buffer": "^6.0.3",
+    "ethereum-blockies-base64": "^1.0.2",
+    "events": "^3.3.0",
+    "process": "^0.11.10",
+    "util": "^0.12.4",
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.1.0",
+    "browserify-zlib": "^0.2.0",
+    "sass": "^1.54.8",
+    "stream-browserify": "^3.0.0",
+    "vite": "^3.1.0"
+  }
+}

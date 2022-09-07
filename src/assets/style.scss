@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;600;700&display=swap");
+
+.chatBoxContainer {
+  /** Background colors */
+  --background-main: #f8f9fa;
+  --background-secondary: #fff;
+  --background-tertiary: #f8fafd;
+
+  /** Text colors */
+  --color-primary: #101016;
+  --color-secondary: #79838e;
+  --color-tertiary: #554f4f;
+  --color-link: #5196d5;
+
+  /** Border */
+  --color-border-main: #e7eaf2;
+  --color-border-secondary: #d5dbea;
+}
+
+/** Utilities */
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.secondary {
+  color: var(--color-secondary) !important;
+}
+
+.btnBlack {
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
+  background: #101016;
+  padding: 5px 20px;
+  border-radius: 100px;
+  font-weight: 500;
+  border: 0px;
+  cursor: pointer;
+  align-items: center;
+}
+
+/** ChatBox module */
+.chatBoxContainer {
+  z-index: 100;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.chatBoxContainerCta {
+  border: 1px solid var(--color-border-main);
+  background: linear-gradient(135deg, #fca173 0%, #fb808d 100%);
+  border-radius: 100px;
+  width: 55px;
+  height: 55px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &:hover {
+    background: #fb808d;
+  }
+}
+
+.chatBoxContainerExpanded {
+  position: fixed;
+  border: 1px solid var(--color-border-main);
+  background: #fff;
+  border-radius: 8px;
+  right: 20px;
+  bottom: 90px;
+  width: 320px;
+  box-shadow: 0 0 20px rgb(0 0 0 / 30%);
+  flex-direction: column;
+  overflow: hidden;
+  display: flex;
+}
+
+.chatBoxHead {
+  padding-top: 10px;
+  border-bottom: 1px solid var(--color-border-main);
+  padding-bottom: 10px;
+  background: var(--background-main);
+
+  p {
+    margin-bottom: 0px;
+    font-size: 13px;
+    text-align: center;
+    width: 100%;
+    margin-top: 0px;
+  }
+}
+
+.chatBoxMessagesContainer {
+  padding: 10px;
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  flex-direction: column-reverse;
+  height: 340px;
+  max-height: 340px;
+  overflow-y: scroll;
+}
+
+.chatBoxNoMessage {
+  width: 100%;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-secondary);
+}
+
+.chatBoxInputContainer {
+  background: var(--background-main);
+  padding: 10px;
+  border-top: 1px solid var(--color-border-main);
+  display: flex;
+}
+
+.hoveredActions {
+  display: none;
+  position: absolute;
+  bottom: -22px;
+  z-index: 10;
+}
+
+.hoveredAction {
+  padding: 5px;
+  background: #fff;
+  border: 1px solid var(--color-border-secondary);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  &:hover {
+    background: #f2f2f2;
+  }
+}
+
+.chatBoxOneMessageContainer {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  align-items: start;
+  position: relative;
+
+  .pfpContainer {
+    margin-top: 1.5px;
+    display: flex;
+
+    img {
+      border: 1px solid var(--color-border-secondary);
+    }
+  }
+
+  .hoveredActions {
+    left: 30px;
+  }
+
+  &:hover .hoveredActions {
+    display: block;
+  }
+}
+
+.chatBoxOneMessageContainerSender {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: relative;
+  align-self: flex-end;
+
+  .pfpContainer {
+    margin-top: 1.5px;
+    display: flex;
+
+    img {
+      border: 1px solid var(--color-border-secondary);
+    }
+  }
+
+  .chatBoxOneSupportMessage {
+    background: #3ca5fc;
+
+    p {
+      color: #fff;
+    }
+  }
+
+  .hoveredActions {
+    left: 0px;
+  }
+
+  &:hover .hoveredActions {
+    display: block;
+  }
+}
+
+.chatBoxOneSupportMessage {
+  display: flex;
+  padding: 7px 14px;
+  background: #e2e6eb;
+  border-radius: 14px;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
+}
+
+.chatBoxOneMessageReplyLine {
+  border-top: 2px solid var(--color-border-secondary);
+  border-left: 2px solid var(--color-border-secondary);
+  border-radius: 6px 0 0 0;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-self: flex-end;
+  margin-left: 10px;
+  margin-right: 2px;
+}
+
+.chatBoxOneMessageReply {
+  background: transparent;
+  margin-bottom: 5px;
+  color: var(--color-secondary);
+}
+
+.pfpContainer {
+  display: flex;
+  align-items: center;
+
+  img.pfp {
+    height: 25px;
+    width: 25px;
+    border-radius: 100px;
+  }
+}
+
+.chatBoxMessageBoxContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .pfpContainer img {
+    border: 1px solid var(--color-border-secondary);
+    height: 29px;
+    width: 29px;
+  }
+}
+
+.chatBoxSubmitContainer {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-left: 4px;
+}
+
+.chatBoxSubmit {
+  background: linear-gradient(130.8deg, #fca173 0%, #fb808d 111.4%);
+  border-radius: 100px;
+  padding: 9px;
+  outline: none;
+  border: 0px;
+  box-shadow: 0 0 8px rgb(0 0 0 / 30%);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+
+  img {
+    display: flex;
+    height: 15px;
+  }
+}
+
+.chatBoxContactReplyToInfo p {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.chatBoxContactReplyToInfoLabel {
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+/** Input */
+.chatBoxInput {
+  font-family: "Ubuntu", sans-serif;
+  padding: 7px 14px;
+  border-radius: 25px;
+  background: #fff;
+  border: 1px solid var(--color-border-main);
+  outline: none;
+  flex: 1;
+
+  &:disabled {
+    background: #f2f2f2;
+    font-style: italic;
+  }
+
+  &:focus {
+    border: 1px solid #5b93c6;
+  }
+}
+
+.loadingSpinner {
+  height: 15px;
+  width: 15px;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/* Manage scrollbars, should works on Chrome, Edge, and Safari */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  /* color of the scroll thumb */
+  border-radius: 20px;
+}
