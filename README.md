@@ -27,7 +27,7 @@ app.mount("#app");
 
 ```js
 <script setup>
-import { ChatBox } from "vue-orbis-chat-support";
+import { OrbisChatSupport } from "vue-orbis-chat-support";
 import "vue-orbis-chat-support/styles.css";
 </script>
 
