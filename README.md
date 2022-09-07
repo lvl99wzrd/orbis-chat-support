@@ -1,7 +1,43 @@
-# Vue 3 + Vite
+# OrbisChatSupport
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+> Decentralized social modules created with the Orbis SDK
 
-## Recommended IDE Setup
+## Install
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+```bash
+npm install --save vue-orbis-chat-support
+```
+
+## Global Usage
+
+```js
+import { createApp } from "vue";
+import App from "./App.vue";
+import VueOrbisChatSupport from "./vue-orbis-chat-support";
+import "vue-orbis-chat-support/styles.css";
+
+const app = createApp(App);
+
+app.use(VueOrbisChatSupport);
+
+app.mount("#app");
+```
+
+## Local Usage
+
+```js
+<script setup>
+import { ChatBox } from "vue-orbis-chat-support";
+import "vue-orbis-chat-support/styles.css";
+</script>
+
+<template>
+  <div>
+    <OrbisChatSupport
+      context="kjzl6cwe1jw147b42j1yjoxyzrzeg3czq5mjm1lrmg5eeq43yutje3f2s0s2n5h"
+      poweredByOrbis="black"
+      display="chat"
+    />
+  </div>
+</template>
+```
