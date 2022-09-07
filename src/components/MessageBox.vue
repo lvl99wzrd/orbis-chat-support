@@ -19,6 +19,16 @@ const message = ref(null);
 const sending = ref(false);
 const contactInput = ref(null);
 
+const shortMessage = (text, length) => {
+  if (!text) {
+    return "-";
+  }
+
+  /** Retrieve first and last characters of a stream to display a shortened version of it */
+  const _firstChars = text.substring(0, length);
+  return _firstChars + "...";
+};
+
 /** Send message to Cerscan support channel */
 const sendMessage = async () => {
   /** Make sure message isn't empty. */
